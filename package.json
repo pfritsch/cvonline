@@ -5,7 +5,7 @@
   "homepage": "http://fritschpierre.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wearecube/frontend-cubie.git"
+    "url": "https://github.com/pfritsch/cvonline.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
