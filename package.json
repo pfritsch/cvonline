@@ -1,8 +1,8 @@
 {
-  "name": "FrontendCubie",
-  "version": "1.0.0",
-  "description": "Cubie is an HTML5 starter kit that includes: package and task management, local server with browser synchronization, beautiful auto-generated documentation, styles pre-processor, files minification and images optimisation",
-  "homepage": "http://www.wearecube.ch/frontendcubie/",
+  "name": "FritschPierre.com",
+  "version": "2.0.0",
+  "description": "Pierre's online Webpage",
+  "homepage": "http://fritschpierre.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/wearecube/frontend-cubie.git"
@@ -10,7 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Pierre Fritsch <fritsch@puzzle.ch>",
+  "author": "Pierre Fritsch <fritschpierre@gmail.com>",
   "license": "Apache-2.0",
   "devDependencies": {
     "browser-sync": "^2.6.4",

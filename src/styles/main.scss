@@ -1,16 +1,24 @@
 // Imports
-// ----------------------------------------------
-// Import external ressources, as plugins or frameworks
-// ----------------------------------------------
+// -----------------------------------------------------------------------------
+// Import external ressources, as plugins or frameworks : normalize, susy etc.
+// -----------------------------------------------------------------------------
 // bower:scss
 // endbower
 
+// 1. Identity
+// -----------------------------------------------------------------------------
+// Project’s core brand elements : typefaces, typography, colours palette
+// -----------------------------------------------------------------------------
 
-// Settings
-// ----------------------------------------------
-// Set default variables
-// ----------------------------------------------
 $base-font: 16px !default;
+$color-primary: #D9E021;
+$color-secondary: #418D4B;
+
+// 2. Layout
+// -----------------------------------------------------------------------------
+// Different design principles for the layout, depending on the viewport : body
+// margins, grid system, gutters, wrappers, vertical rhythm etc.
+// -----------------------------------------------------------------------------
 
 $susy: (
   container: auto,
@@ -25,79 +33,33 @@ $break-small: 20em, 4;
 $break-medium: 40em, 8;
 $break-large: 60em, 12;
 
-$color-primary: #9EAF56;
-$color-secondary: #418D4B;
+// 3. Elements
+// -----------------------------------------------------------------------------
+// Smallest reusable parts : buttons, links, inputs, drop-downs etc.
+// -----------------------------------------------------------------------------
+//@import "elements/buttons";
 
 
-// Base
-// ----------------------------------------------
-// Base rules are the defaults. They are almost exclusively single element selectors but
-// it could include attribute selectors, pseudo-class selectors, child selectors or sibling
-// selectors. Essentially, a base style says that wherever this element is on the page.
-// ----------------------------------------------
-@import 'base/function';
-@import 'base/common';
-@import 'base/typography';
+// 4. Components
+// -----------------------------------------------------------------------------
+// Anything that uses at least a few Elements : cards, heros, navigation menus
+// etc.
+// -----------------------------------------------------------------------------
+//@import "components/logo";
+//@import "components/navbar";
 
 
-// Module
-// ----------------------------------------------
-// Modules are the reusable, modular parts of our design. They are the callouts, the buttons, 
-// the products and so on. (Micro elements)
-//
-// /* Example module: Product */
-// .product { }
-//
-// /* Product list */
-// .product-list { }
-//
-// /* Product name */
-// .product-name { }
-// ----------------------------------------------
-// @import 'module/panel';
-// @import 'module/product';
-@import 'module/button';
-@import 'module/icon';
-@import 'module/nav';
+// 5. Compositions
+// -----------------------------------------------------------------------------
+// Part that has multiple Components inside it, define how to Components inside
+// it should behave : whitespaces, title, background of the block etc.
+// -----------------------------------------------------------------------------
+//@import "compositions/header";
 
 
-// Layout
-// ----------------------------------------------
-// Layout rules divide the page into sections. Layouts hold one or more modules together. (Macro)
-//
-// /* Example layout: Header */
-// .header-container { }
-// ----------------------------------------------
-@import 'layout/form';
-@import 'layout/grid';
-@import 'layout/header';
-
-
-// Page
-// ----------------------------------------------
-// Styles for specific pages.
-//
-// /* Example layout: Home */
-// .home h1,
-// .home .h1 { }
-// ----------------------------------------------
-// @import 'layout/home';
-// @import 'layout/contact';
-
-
-// State
-// ----------------------------------------------
-// State rules are ways to describe how our modules or layouts will look when in a particular
-// state. Is it hidden or expanded? Is it active or inactive? They are about describing how a
-// module or layout looks on screens that are smaller or bigger. They are also about
-// describing how a module might look in different views like the home page or the inside page.
-//
-// /* Example state: Collapsed Product */
-// .product.is-collapsed { }
-// ----------------------------------------------
-.is-hidden {
-  position: absolute;
-  visibility: hidden;
-  height: 0;
-  width: 0;
-}
+// 6. Pages
+// -----------------------------------------------------------------------------
+// Actual Pages (or screens) of the project. All the weird exceptions defined
+// for specific pages like "the contact page should have a blue background"
+// -----------------------------------------------------------------------------
+//@import "pages/home";
