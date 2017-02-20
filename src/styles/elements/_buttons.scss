@@ -64,6 +64,7 @@ a.button {
     }
     @include susy-breakpoint($break-large) {
       margin-top: rem-calc(60);
+      margin-bottom: rem-calc(36);
     }
   }
   &.is-dark {
