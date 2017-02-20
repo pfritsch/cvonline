@@ -7,4 +7,15 @@
     padding-top: rem-calc(120);
     padding-bottom: rem-calc(96);
   }
+
+  &.is-title {
+    text-align: center;
+    padding-top: rem-calc(240);
+    @include susy-breakpoint($break-medium) {
+      padding-top: 0;
+      @include pad(1, 1);
+    }
+    @include susy-breakpoint($break-large) {
+    }
+  }
 }

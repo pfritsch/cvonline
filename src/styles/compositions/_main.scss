@@ -1,6 +1,46 @@
-.main-container {
+.main-container > div {
+  position: relative;
+}
+.main-container > div::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-repeat: no-repeat;
-  background-position: -72px bottom;
-  background-size: contain;
-  background-image: url('../assets/images/pierre.png');
+  background-position: center top;
+  background-image: url('../assets/images/pierre-small.png');
+
+  @include susy-breakpoint($break-medium) {
+    background-image: url('../assets/images/pierre.png');
+    background-position: 6px bottom;
+    background-size: 35%;
+    left: rem-calc(-36);
+  }
+  @include susy-breakpoint(52.500em) {
+    background-size: contain;
+    left: rem-calc(-36);
+  }
+  @include susy-breakpoint($break-large) {
+    background-position: left bottom;
+    left: rem-calc(-144);
+  }
+}
+.main-content {
+  @include susy-breakpoint($break-medium) {
+    @include pad(2, 0);
+  }
+}
+.main-aside {
+  padding-bottom: rem-calc(60);
+  padding-top: rem-calc(60);
+  @include susy-breakpoint($break-medium) {
+    @include pad(2, 0);
+    padding-bottom: rem-calc(120);
+  }
+  @include susy-breakpoint($break-large) {
+    padding-top: rem-calc(60);
+  }
 }

@@ -76,6 +76,10 @@ Responsive hotizontal menu.
     height: 4px;
     background: $color-secondary;
     border-radius: 2px;
+
+    @include susy-breakpoint($break-large) {
+      top: 48px;
+    }
   }
 }
 
