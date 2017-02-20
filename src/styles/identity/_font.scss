@@ -1,0 +1,55 @@
+// Font
+// -----------------------------------------------------------------------------
+/**
+ * @license
+ * MyFonts Webfont Build ID 2772105, 2014-03-18T06:23:36-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Halis Rounded Black by Ahmet Altun
+ * URL: http://www.myfonts.com/fonts/ahmet-altun/halis-rounded/black/
+ * URL: http://www.myfonts.com/fonts/ahmet-altun/halis-rounded/black/
+ * Copyright: Copyright (c) 2013 by Ahmet Altun. All rights reserved.
+ *
+ * Webfont: Halis Rounded Medium by Ahmet Altun
+ * URL: http://www.myfonts.com/fonts/ahmet-altun/halis-rounded/medium/
+ * Copyright: Copyright (c) 2013 by Ahmet Altun. All rights reserved.
+ *
+ * Webfont: Halis Rounded by Ahmet Altun
+ * URL: http://www.myfonts.com/fonts/ahmet-altun/halis-rounded/regular/
+ * Copyright: Copyright (c) 2013 by Ahmet Altun. All rights reserved.
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2772105
+ * Licensed pageviews: 500,000
+ *
+ * © 2014 MyFonts Inc
+*/
+@import url("//hello.myfonts.net/count/2a4c89");
+@font-face {
+  font-family: 'HalisR';
+  src: url('../assets/fonts/2A4C89_0_0.eot');
+  src: url('../assets/fonts/2A4C89_0_0.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/2A4C89_0_0.woff') format('woff'),
+       url('../assets/fonts/2A4C89_0_0.ttf') format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'HalisR';
+  src: url('../assets/fonts/2A4C89_5_0.eot');
+  src: url('../assets/fonts/2A4C89_5_0.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/2A4C89_5_0.woff') format('woff'),
+       url('../assets/fonts/2A4C89_5_0.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'HalisR';
+  src: url('../assets/fonts/2A4C89_6_0.eot');
+  src: url('../assets/fonts/2A4C89_6_0.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/2A4C89_6_0.woff') format('woff'),
+       url('../assets/fonts/2A4C89_6_0.ttf') format('truetype');
+  font-weight: normal;
+}

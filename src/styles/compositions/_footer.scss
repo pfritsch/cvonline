@@ -1,0 +1,9 @@
+.footer-container {
+  text-align: center;
+  background: #293E64;
+  padding: rem-calc(60 0);
+
+  @include susy-breakpoint($break-large) {
+    padding: rem-calc(120 0);
+  }
+}

@@ -1,0 +1,23 @@
+// Paragraphs
+// -----------------------------------------------------------------------------
+p {
+  margin: 0;
+  font-size: rem-calc(14);
+  line-height: rem-calc(24);
+  @include susy-breakpoint($break-large) {
+    font-size: rem-calc(16);
+    line-height: rem-calc(36);
+  }
+}
+p.is-highlight {
+  font-weight: 500;
+  color: #544F4F;
+  font-size: rem-calc(18);
+  line-height: rem-calc(24);
+  padding-top: rem-calc(48);
+  @include susy-breakpoint($break-large) {
+    font-size: rem-calc(24);
+    line-height: rem-calc(36);
+    padding-top: rem-calc(60);
+  }
+}

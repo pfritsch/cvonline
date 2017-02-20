@@ -1,0 +1,10 @@
+.hero {
+  text-align: center;
+  padding-top: rem-calc(60);
+  padding-bottom: rem-calc(48);
+
+  @include susy-breakpoint($break-large) {
+    padding-top: rem-calc(120);
+    padding-bottom: rem-calc(96);
+  }
+}

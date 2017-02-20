@@ -1,0 +1,91 @@
+// Buttons
+// ----------------------------------------------
+
+/*doc
+---
+title: Button
+name: Button
+category: Elements
+---
+
+Button styles can be applied to any element. Typically you'll want to
+use either a `<button>` or an `<a>` element:
+
+```html_example
+<button class="button">Simple button</button>
+<a class="button" href="http://wearecube.ch">Link with .button class</a>
+<a class="button is-primary">Primary button</a>
+<a class="button is-disabled">Disabled button</a>
+```
+
+Three sizes for the buttons: small, medium (default) and big.
+
+```html_example
+<a class="button is-small">Small</a>
+<a class="button">Medium</a>
+<a class="button is-dark">Dark</a>
+```
+*/
+
+.button,
+button.button,
+a.button {
+  display: inline-block;
+  padding: rem-calc(12 36);
+  white-space: nowrap;
+  vertical-align: middle;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: all 300ms ease-in-out;
+  -webkit-appearance: none;
+
+  font-weight: 500;
+  color: #FFFFFF;
+  font-size: rem-calc(18);
+  line-height: rem-calc(24);
+
+  @include susy-breakpoint($break-large) {
+    font-size: rem-calc(20);
+    padding: rem-calc(24 60);
+  }
+
+  &.is-cta {
+    background: none;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    margin-top: rem-calc(48);
+    &:focus,
+    &:focus:hover,
+    &:hover,
+    &:active {
+      background: white;
+      color: #1E3152;
+    }
+    @include susy-breakpoint($break-large) {
+      margin-top: rem-calc(60);
+    }
+  }
+  &.is-dark {
+    background: #1E3152;
+    border-radius: 24px;
+    font-size: rem-calc(14);
+    line-height: rem-calc(24);
+    padding: rem-calc(12 24 12 20);
+
+    @include susy-breakpoint($break-medium) {
+      display: block;
+    }
+    @include susy-breakpoint($break-large) {
+      font-size: rem-calc(16);
+      border-radius: 36px;
+    }
+    &:focus,
+    &:focus:hover,
+    &:hover,
+    &:active {
+      color: #1E3152;
+      background-color: #fff;
+    }
+  }
+}

@@ -1,11 +1,11 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
-    <title>Frontend Cubie - A little Starter kit for hurry developers</title>
+    <title>Pierre Fritsch, UI/UX Designer Freelance</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A little Frontend Starter kit with Gulp, Bower, LibSass, Susy, Breakpoint, Autoprefixer, Image optimization, etc. Made by We Are Cube.3">
+    <meta name="description" content="Le CV en ligne de Pierre FRITSCH,  UI/UX Designer et Développeur Frontend Freelance basé en Alsace">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <link rel="apple-touch-icon" sizes="57x57" href="assets/images/apple-icon-57x57.png">
@@ -22,12 +22,39 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-    <meta name="msapplication-TileColor" content="#8BA124">
+    <meta name="msapplication-TileColor" content="#A2353C">
     <meta name="msapplication-TileImage" content="assets/images/ms-icon-144x144.png">
-    <meta name="theme-color" content="#8BA124">
+    <meta name="theme-color" content="#A2353C">
 
-    <link href="//www.google-analytics.com" rel="dns-prefetch">
-    <link href="//ajax.googleapis.com" rel="dns-prefetch">
+    <!--
+    /**
+     * @license
+     * MyFonts Webfont Build ID 2772105, 2014-03-18T06:23:36-0400
+     *
+     * The fonts listed in this notice are subject to the End User License
+     * Agreement(s) entered into by the website owner. All other parties are
+     * explicitly restricted from using the Licensed Webfonts(s).
+     *
+     * You may obtain a valid license at the URLs below.
+     *
+     * Webfont: Halis Rounded Black by Ahmet Altun
+     * URL: http://www.myfonts.com/fonts/ahmet-altun/halis-rounded/black/
+     * Copyright: Copyright (c) 2013 by Ahmet Altun. All rights reserved.
+     *
+     * Webfont: Halis Rounded Medium by Ahmet Altun
+     * URL: http://www.myfonts.com/fonts/ahmet-altun/halis-rounded/medium/
+     * Copyright: Copyright (c) 2013 by Ahmet Altun. All rights reserved.
+     *
+     * Webfont: Halis Rounded by Ahmet Altun
+     * URL: http://www.myfonts.com/fonts/ahmet-altun/halis-rounded/regular/
+     * Copyright: Copyright (c) 2013 by Ahmet Altun. All rights reserved.
+     *
+     * License: http://www.myfonts.com/viewlicense?type=web&buildid=2772105
+     * Licensed pageviews: 500,000
+     *
+     * © 2014 MyFonts Inc
+    */
+    -->
 
     <!-- bower:css -->
     <!-- endbower -->
@@ -35,7 +62,7 @@
 
   </head>
   <body class="home">
-    
+
     <!-- Icons SVG Sprite -->
     <div class="is-hidden">
       <!-- inject:svg --><!-- endinject -->
@@ -46,88 +73,80 @@
         <nav class="header-nav nav-horizontal" role="navigation">
           <ul>
             <li>
-              <a href="./">Home</a>
+              <a href="./" class="active">Français</a>
             </li>
             <li>
-              <a href="./styleguide">Styleguide</a>
+              <a href="./styleguide">Deutsch</a>
+            </li>
+            <li>
+              <a href="./styleguide">English</a>
             </li>
           </ul>
         </nav>
-        <div class="header-logo">
-          <a href="./">
-            <img src="assets/images/frontend_cubie.svg" alt="Cubie. The little front-end companion" width="160" height="170">
-          </a>
-        </div>
       </div>
+      <section class="grid-container hero">
+        <blockquote>
+          <p class="quote">« Une interface utilisateur c’est comme une blague, si tu dois l’expliquer,  c’est qu’elle n’est pas très bonne. »</p>
+          <footer class="quote-author">– Martin LeBlanc</footer>
+        </blockquote>
+      </section>
     </header>
 
     <main class="main-container" role="main">
       <section>
         <div class="grid-container">
-          <h1>Cubie</h1>
-          <h2>The little front-end companion</h2>
-          <p>Cubie is an HTML5 starter kit that includes: package and task management, local server with browser synchronization, beautiful auto-generated documentation, styles pre-processor, files minification and images optimisation.</p>
+          <h1>Je me présente, Pierre, UI/UX Designer et développeur Frontend depuis 2006</h1>
         </div>
       </section>
       <section>
         <div class="grid-container">
-          <p>
-            <a href="https://github.com/wearecube/frontend-cubie/archive/master.zip" class="button is-primary is-big">
-              <svg class="icon is-inline"><use xlink:href="#download" /></svg> Download the starter kit
-            </a>
-          </p>
-          <p>
-            <a href="https://github.com/wearecube/frontend-cubie" class="button">
-              <svg class="icon is-inline"><use xlink:href="#github" /></svg> Fork me on Github
-            </a>
-            <a href="https://twitter.com/WeAreCubeDesign" class="button">
-              <svg class="icon is-inline"><use xlink:href="#twitter" /></svg> Follow us on Twitter
-            </a>
-          </p>
-        </div>
-      </section>
-      <section>
-        <div class="grid-container">
-          <h2>A collection of tools</h2>
-          <ul>
-            <li><a href="http://gulpjs.com/">Gulp</a></li>
-            <li><a href="http://bower.io/">Bower</a></li>
-            <li><a href="https://html5boilerplate.com/">HTML5 Boilerplate</a></li>
-            <li><a href="http://libsass.org/">LibSass</a></li>
-            <li><a href="http://susy.oddbird.net/">Susy</a></li>
-            <li><a href="http://breakpoint-sass.com/">Breakpoint Sass</a></li>
-            <li><a href="https://github.com/postcss/autoprefixer">Autoprefixer</a></li>
-            <li><a href="http://trulia.github.io/hologram/">Hologram</a></li>
-            <li><a href="http://www.browsersync.io/">BrowserSync</a></li>
+
+          <h2>Approche</h2>
+          <p>Que ce soit un site vitrine, e-commerce, une application web ou mobile : l’interface c’est le produit ! Et je souhaite à tout produit de remplir son rôle au mieux, en répondant au besoin des utilisateurs.
+
+          <h2>Compétences</h2>
+          <p>UX Design, accompagnement dans la phase de conception et réalisation de prototypes. Design d'interface et ergonomie. Développement Frontend, intégration HTML/CSS et Javascript.</p>
+
+          <h2>Expériences</h2>
+          <ul class="no-bullet">
+            <li>2012 / 2016		UI/UX Designer chez Puzzle ITC à Berne</li>
+            <li>2008 / 2011	Webdesigner chez RBS à Entzheim</li>
+            <li>2006 / 2008	Graphiste multimédia chez Perinfo à Strasbourg</li>
           </ul>
+          <p>Oui, j’ai l’habitude de bosser avec les équipes de développement. Et pour différent types de clients, comme par exemple Swisscom, la Poste, Partners Group, les CFF, la confédération Suisse, WOCAT, la Mobilière, Granini, De Dietrich, Rossignol, Hager, etc.</p>
+
+          <p class="is-highlight">Et sinon, j’essaie d’avoir un impact positif, j’ai adoré être un <a href="http://www.wearecube.ch/">Cube</a> dans une boîte de Puzzle. Je suis parfois un <a href="http://www.hungrybirds.fr/">Oiseau voyageur</a>, j’organise des <a href="https://frontendpizza.herokuapp.com/">Frontend Pizza</a> et j’ai crée le site de <a href="https://bandedejoueurs.com/">Bande de joueurs</a> avec des amis.</p>
         </div>
       </section>
     </main>
 
-    <aside class="sidebar-container" role="complementary">
-
-    </aside>
-
     <footer class="footer-container" role="contentinfo">
       <div class="grid-container">
-        <p>Cubie was build by <a href="http://www.wearecube.ch/">We Are Cube.<sup>3</sup></a></p>
-        <p><small>Entypo pictograms by Daniel Bruce — <a href="http://www.entypo.com">www.entypo.com</a></small></p>
+        <h2 class="h1 is-light">Un coup de pouce ? Je suis disponible pour des missions de Freelance</h2>
+        <a href="" class="button is-cta">Ça tombe bien !</a>
+      </div>
+      <div class="grid-container">
+        <ul class="nav-social">
+          <li>
+            <a href="https://github.com/pfritsch" class="button is-dark">
+              <svg class="icon is-inline"><use xlink:href="#icon-github" /></svg> github.com/pfritsch
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/pierre-fritsch/" class="button is-dark">
+              <svg class="icon is-inline"><use xlink:href="#icon-linkedin" /></svg> in/pierre-fritsch
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/pierrefritsch" class="button is-dark">
+              <svg class="icon is-inline"><use xlink:href="#icon-twitter" /></svg> @fritschpierre
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
 
-
     <script src="scripts/vendors.min.js"></script>
     <script src="scripts/main.min.js"></script>
-
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
   </body>
 </html>

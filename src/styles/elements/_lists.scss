@@ -1,0 +1,15 @@
+// Lists
+// -----------------------------------------------------------------------------
+
+ul {
+  font-size: rem-calc(14);
+  line-height: rem-calc(24);
+  @include susy-breakpoint($break-large) {
+    font-size: rem-calc(16);
+    line-height: rem-calc(36);
+  }
+  &.no-bullet {
+    list-style: none;
+    padding: 0;
+  }
+}

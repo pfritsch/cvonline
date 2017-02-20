@@ -66,12 +66,23 @@ gulp.task('copy', function () {
   return gulp.src(['./.htaccess', './robots.txt'])
     .pipe(gulp.dest(dist))
 })
+// Copy fonts
+gulp.task('fonts', function () {
+  return gulp.src(src + 'assets/fonts/*')
+    .pipe(gulp.dest(dist + 'assets/fonts/'))
+})
 
 // TEMPLATE
 // Bower css and scripts inject +  SVG Sprite inject
 gulp.task('template', function () {
   var svgs = gulp
     .src(src + 'assets/icons/*.svg')
+    .pipe(imagemin({
+      svgoPlugins: [{
+        removeViewBox: false
+      }]
+    }))
+    .pipe(rename({prefix: 'icon-'}))
     .pipe(svgstore({ inlineSvg: true }))
   function fileContents (filePath, file) {
     return file.contents.toString()
@@ -178,7 +189,7 @@ gulp.task('sitemap', function () {
 })
 
 // BUILD
-gulp.task('build', ['copy', 'vendors', 'template', 'images', 'scripts', 'styles'], reload)
+gulp.task('build', ['copy', 'fonts', 'vendors', 'template', 'images', 'scripts', 'styles'], reload)
 
 // SERVER
 // Browser Sync (wait build task to be done)

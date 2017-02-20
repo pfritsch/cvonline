@@ -1,0 +1,25 @@
+blockquote {
+  padding: 0;
+  margin: 0;
+}
+.quote {
+  font-weight: 600;
+  font-size: rem-calc(30);
+  line-height: rem-calc(36);
+  color: #293E64;
+
+  @include susy-breakpoint($break-large) {
+    font-size: rem-calc(50);
+    line-height: rem-calc(72);
+  }
+}
+.quote-author {
+  font-size: rem-calc(14);
+  line-height: rem-calc(24);
+  text-align: right;
+  float: right;
+  color: #544F4F;
+  @include susy-breakpoint($break-large) {
+    font-size: rem-calc(20);
+  }
+}

@@ -2,12 +2,12 @@
 ---
 title: Input and Textarea
 name: input
-category: Base
+category: Elements
 ---
 
 ```html_example
 <input type="email" placeholder="Enter email">
-<textarea placeholder="Comment"></textarea> 
+<textarea placeholder="Comment"></textarea>
 <input id="check" type="checkbox" name="check"> <label for="check">I'm ok</label>
 ```
 */

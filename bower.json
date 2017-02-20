@@ -25,7 +25,6 @@
     "zepto": "~1.1.6",
     "normalize-scss": "~3.0.3",
     "susy": "~2.2.2",
-    "breakpoint-sass": "~2.5.0",
-    "modernizr": "~2.8.3"
+    "breakpoint-sass": "~2.5.0"
   }
 }

@@ -1,0 +1,31 @@
+// Links
+// -----------------------------------------------------------------------------
+
+/*doc
+---
+title: Links
+name: Links
+category: Elements
+---
+
+The HTML `<a>` Element (or the HTML Anchor Element) defines a hyperlink, the named target destination for a hyperlink, or both.
+
+```html_example
+<a href="http://wearecube.ch/">Here we cube</a>
+```
+*/
+
+a {
+  color: darken($color-secondary, 5%);
+
+  &:hover,
+  &:active {
+    color: $color-primary;
+  }
+  &:visited {
+
+  }
+  &:focus {
+
+  }
+}
