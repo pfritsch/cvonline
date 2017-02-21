@@ -212,7 +212,20 @@ AddDefaultCharset utf-8
     Options +FollowSymlinks
   # Options +SymLinksIfOwnerMatch
     RewriteEngine On
-  # RewriteBase /
+    RewriteBase /
+
+    # LANGUAGE REDIRECTS
+    # ------------------
+    RewriteCond %{HTTP:Accept-language} ^fr [NC]
+    RewriteRule ^$ http://fritschpierre.com/ [L,R=301]
+
+    RewriteCond %{HTTP:Accept-language} ^de [NC]
+    RewriteRule ^$ http://fritschpierre.com/de/ [L,R=301]
+
+    RewriteCond %{HTTP:Accept-language} ^en [NC]
+    RewriteRule ^$ http://fritschpierre.com/en/ [L,R=301]
+
+    RewriteCond %{HTTP:Accept-language} !^(fr|de|en).* [NC]
 </IfModule>
 
 # ------------------------------------------------------------------------------

@@ -7,6 +7,7 @@ const rename = require('gulp-rename')
 const header = require('gulp-header')
 const inject = require('gulp-inject')
 const concat = require('gulp-concat')
+const clean = require('gulp-clean')
 
 // Template
 const minifyHTML = require('gulp-minify-html')
@@ -64,8 +65,9 @@ const reload = browserSync.reload
 // Copy extra files like .htaccess, robots.txt
 gulp.task('copy', function () {
   return gulp.src(['./.htaccess', './robots.txt'])
-    .pipe(gulp.dest(dist))
+  .pipe(gulp.dest(dist))
 })
+
 // Copy fonts
 gulp.task('fonts', function () {
   return gulp.src(src + 'assets/fonts/*')
@@ -87,7 +89,7 @@ gulp.task('template', function () {
   function fileContents (filePath, file) {
     return file.contents.toString()
   }
-  return gulp.src(src + '*.html')
+  return gulp.src(src + '**/*.html')
     .pipe(wiredep({
       includeSelf: true
     }))
@@ -188,6 +190,13 @@ gulp.task('sitemap', function () {
     .pipe(gulp.dest(dist))
 })
 
+// CLEAN
+// Generate a Sitemap
+gulp.task('clean', function () {
+  return gulp.src(dist)
+    .pipe(clean())
+})
+
 // BUILD
 gulp.task('build', ['copy', 'fonts', 'vendors', 'template', 'images', 'scripts', 'styles'], reload)
 
@@ -201,7 +210,7 @@ gulp.task('serve', ['build'], function () {
       routes: { '/bower_components': 'bower_components' }
     }
   })
-  gulp.watch(src + '**/*.{html,json,svg}', ['template-watch'])
+  gulp.watch(src + '**/*.{html,json,svg}', ['template-watch', 'copy'])
   gulp.watch(src + 'scripts/*.js', ['scripts'])
   gulp.watch(src + 'assets/images/*', ['images'])
   gulp.watch(src + 'styles/{,*/}*.{scss,sass}', ['styles', 'doc'])

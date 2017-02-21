@@ -16,16 +16,21 @@ The HTML `<a>` Element (or the HTML Anchor Element) defines a hyperlink, the nam
 */
 
 a {
-  color: darken($color-secondary, 5%);
+  color: $color-secondary;
 
   &:hover,
   &:active {
     color: $color-primary;
   }
   &:visited {
-
+    color: lighten($color-secondary, 10%);
   }
   &:focus {
-
+    color: darken($color-primary, 10%);
   }
+}
+
+a[href^="tel:"] {
+  color: inherit;
+  text-decoration: none;
 }

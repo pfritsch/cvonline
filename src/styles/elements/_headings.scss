@@ -32,9 +32,6 @@ h1, .h1 {
     font-size: rem-calc(28);
     line-height: rem-calc(36);
   }
-  &.is-light {
-    color: #FFFFFF;
-  }
 }
 
 h2, .h2 {
@@ -46,4 +43,12 @@ h2, .h2 {
     font-size: rem-calc(24);
     line-height: rem-calc(36);
   }
+}
+
+
+h1.is-light,
+.h1.is-light,
+h2.is-light,
+.h2.is-light {
+  color: #FFFFFF;
 }

@@ -9,7 +9,8 @@
   height: rem-calc(24);
   fill: currentColor;
   &.is-inline {
-    float: left;
+    vertical-align: middle;
+    margin-top: -4px;
     margin-right: rem-calc(6);
   }
 }
