@@ -1,5 +1,7 @@
-.hero {
+.hero-container {
   text-align: center;
+}
+.hero {
   padding-top: rem-calc(60);
   padding-bottom: rem-calc(48);
 
@@ -10,12 +12,19 @@
 
   &.is-title {
     text-align: center;
-    padding-top: rem-calc(240);
     @include susy-breakpoint($break-medium) {
       padding-top: 0;
       @include pad(1, 1);
     }
-    @include susy-breakpoint($break-large) {
-    }
+  }
+}
+.hero-portrait {
+  display: inline-block;
+  overflow: hidden;
+  line-height: 0;
+  text-align: center;
+  border-radius: 96px;
+  @include susy-breakpoint($break-medium) {
+    display: none;
   }
 }

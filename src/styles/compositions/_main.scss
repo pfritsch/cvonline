@@ -11,7 +11,6 @@
   left: 0;
   background-repeat: no-repeat;
   background-position: center top;
-  background-image: url('../assets/images/pierre-small.png');
 
   @include susy-breakpoint($break-medium) {
     background-image: url('../assets/images/pierre.png');
@@ -25,7 +24,7 @@
   }
   @include susy-breakpoint($break-large) {
     background-position: left bottom;
-    left: rem-calc(-144);
+    left: rem-calc(-168);
   }
 }
 .main-content {
