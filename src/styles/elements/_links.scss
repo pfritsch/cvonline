@@ -17,13 +17,14 @@ The HTML `<a>` Element (or the HTML Anchor Element) defines a hyperlink, the nam
 
 a {
   color: $color-secondary;
+  transition: all 300ms ease;
 
+  &:visited {
+    color: lighten($color-secondary, 10%);
+  }
   &:hover,
   &:active {
     color: $color-primary;
-  }
-  &:visited {
-    color: lighten($color-secondary, 10%);
   }
   &:focus {
     color: darken($color-primary, 10%);

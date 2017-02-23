@@ -1,10 +1,13 @@
 .main-container > div {
   position: relative;
+  z-index: 1;
 }
 .main-container > div::after {
   content: '';
   display: block;
+  z-index: -1;
   position: absolute;
+  pointer-events: none;
   top: 0;
   right: 0;
   bottom: 0;
