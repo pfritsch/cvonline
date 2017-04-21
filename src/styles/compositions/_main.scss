@@ -1,34 +1,6 @@
-.main-container > div {
+.main-container {
   position: relative;
-  z-index: 1;
-}
-.main-container > div::after {
-  content: '';
-  display: block;
-  z-index: -1;
-  position: absolute;
-  pointer-events: none;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-repeat: no-repeat;
-  background-position: center top;
-
-  @include susy-breakpoint($break-medium) {
-    background-image: url('../assets/images/pierre.png');
-    background-position: 6px bottom;
-    background-size: 35%;
-    left: rem-calc(-36);
-  }
-  @include susy-breakpoint(52.500em) {
-    background-size: contain;
-    left: rem-calc(-36);
-  }
-  @include susy-breakpoint($break-large) {
-    background-position: left bottom;
-    left: rem-calc(-168);
-  }
+  overflow: hidden;
 }
 .main-content {
   @include susy-breakpoint($break-medium) {
@@ -44,5 +16,44 @@
   }
   @include susy-breakpoint($break-large) {
     padding-top: rem-calc(60);
+  }
+}
+.main-portrait {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 32%;
+  max-height: 100%;
+  margin: 0;
+  line-height: 0;
+  margin-left: -2%;
+  z-index: 1;
+
+  @include susy-breakpoint($break-medium) {
+    display: block;
+  }
+
+  @include susy-breakpoint($break-large) {
+    width: 38%;
+    margin-left: -6%;
+  }
+
+  @include susy-breakpoint(80em) {
+    top: 0;
+    width: rem-calc(520);
+    left: 50%;
+    margin-left: -720px;
+  }
+
+  img {
+    width: 100%;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 800ms ease-in-out;
+  }
+  img.lazyloaded {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

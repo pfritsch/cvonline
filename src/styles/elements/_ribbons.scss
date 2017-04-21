@@ -1,0 +1,52 @@
+.ribbon {
+  width: 200px;
+  background: $color-primary;
+  position: absolute;
+  top: 25px;
+  left: -50px;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: white;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  letter-spacing: -0.005em;
+  font-weight: 600;
+
+  &:visited,
+  &:link {
+    color: white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: darken($color-secondary, 10%);
+  }
+
+
+  &.is-cv {
+    width: 200px;
+    top: 15px;
+    right: -64px;
+    left: auto;
+    line-height: 36px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    text-decoration: none;
+
+    @include susy-breakpoint($break-large) {
+      width: 200px;
+      top: 25px;
+      right: -50px;
+      left: auto;
+      line-height: 50px;
+    }
+
+    span {
+      display: none;
+      @include susy-breakpoint($break-large) {
+        display: inline;
+      }
+    }
+  }
+}

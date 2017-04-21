@@ -25,6 +25,7 @@ Responsive hotizontal menu.
 */
 .nav-horizontal {
   text-align: center;
+  margin-top: rem-calc(36);
   @include susy-breakpoint($break-large) {
     margin-top: rem-calc(120);
   }

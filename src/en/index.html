@@ -94,6 +94,7 @@
           <footer class="quote-author">– Martin LeBlanc</footer>
         </blockquote>
       </section>
+      <a href="assets/cv-en.pdf" class="ribbon is-cv" title="Download my CV"><span>See my&nbsp;</span>CV</a>
     </header>
 
     <main class="main-container" role="main">
@@ -108,10 +109,10 @@
           <h2>Skills</h2>
           <p>UX Design, support with the conception phase, user tests and prototyping. User Interface Design and ergonomy. Frontend development, HTML/CSS & Javascript.</p>
           <h2>Experiences</h2>
-          <ul class="no-bullet">
-            <li>2012 / 2016 UI/UX Designer at Puzzle ITC, Bern</li>
-            <li>2008 / 2011 Webdesigner at RBS, Entzheim</li>
-            <li>2006 / 2008 Visual designer at Perinfo, Strasbourg</li>
+          <ul class="no-bullet experience">
+            <li><span>2012 / 2016</span> UI/UX Designer at Puzzle ITC, Bern</li>
+            <li><span>2008 / 2011</span> Webdesigner at RBS, Entzheim</li>
+            <li><span>2006 / 2008</span> Visual designer at Perinfo, Strasbourg</li>
           </ul>
           <p>Yes, I'm used to work with dev teams! And for many kinds of clients, such as Swisscom, the swiss Post, Partners Group, SBB, the Swiss Confederation, WOCAT, die Mobiliar, Granini, De Dietrich, Rossignol, Hager, etc.</p>
         </section>
@@ -119,7 +120,49 @@
           <p class="is-highlight">Otherwise... I try to have a positive impact, lastly I was a <a href="http://www.wearecube.ch/">Cube</a>  within a <a href="https://www.puzzle.ch/de/">Puzzle</a> company. Sometimes I travel like a <a href="http://www.hungrybirds.fr/">Hungry Bird</a>, I organize <a href="https://frontendpizza.herokuapp.com/">Frontend Pizzas</a> and with friends, we created <a href="https://bandedejoueurs.com/">Bande de joueurs</a> for boardgame players.</p>
         </aside>
       </div>
+      <figure class="main-portrait">
+        <img
+          data-sizes="auto"
+          data-src="../assets/images/pierre.png"
+          data-srcset="
+            ../assets/images/pierre_small.png 320w,
+            ../assets/images/pierre_medium.png 480w,
+            ../assets/images/pierre.png 640w"
+          class="lazyload" />
+      </figure>
     </main>
+
+    <section id="portfolio" class="portfolio">
+      <div class="grid-container">
+      <script id="portfolio-template" type="text/x-handlebars-template">
+        <h2 class="portfolio-title">Some selected works</h2>
+        <div class="portfolio-list">
+          {{#each projects}}
+            <figure class="card" title="{{this.name}}" data-project-id="{{this.id}}">
+              {{#if this.covers.[404]}}
+              <img class="card-image" src="{{this.covers.[404]}}" title="{{this.name}}">
+              {{else}}
+                {{#if this.covers.[230]}}
+                <img class="card-image" src="{{this.covers.[230]}}" title="{{this.name}}">
+                {{else}}
+                <img class="card-image" src="{{this.covers.[202]}}" title="{{this.name}}">
+                {{/if}}
+              {{/if}}
+              <figcaption>
+                <h2 class="card-title">{{this.name}}</h2>
+                <div class="card-fields">
+                {{#each this.fields}}
+                  <p class="card-field">{{this}}</p>
+                {{/each}}
+                </div>
+                <a href="{{this.url}}" target="_blank">See more</a>
+              </figcaption>
+            </figure>
+          {{/each}}
+        </div>
+      </script>
+      </div>
+    </section>
 
     <footer class="footer-container" role="contentinfo">
       <div class="grid-container">

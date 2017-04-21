@@ -1,0 +1,9 @@
+.experience {
+  span {
+    float: left;
+    width: rem-calc(84);
+    @include susy-breakpoint($break-medium) {
+      width: rem-calc(96);
+    }
+  }
+}

@@ -13,6 +13,7 @@
 $base-font: 16px !default;
 $color-primary: #293E64;
 $color-secondary: #A2353C;
+$color-text: #6B6666;
 
 // Grid System variables
 $susy: (
@@ -48,6 +49,7 @@ $break-large: 60em, 6;
 // Smallest reusable parts : buttons, links, inputs, drop-downs etc.
 // -----------------------------------------------------------------------------
 @import 'elements/buttons';
+@import 'elements/cards';
 @import 'elements/inputs';
 @import 'elements/headings';
 @import 'elements/paragraphs';
@@ -55,6 +57,7 @@ $break-large: 60em, 6;
 @import 'elements/links';
 @import 'elements/lists';
 @import 'elements/quote';
+@import 'elements/ribbons';
 
 
 // 4. Components
@@ -64,6 +67,8 @@ $break-large: 60em, 6;
 // -----------------------------------------------------------------------------
 @import 'components/nav';
 @import 'components/hero';
+@import 'components/portfolio';
+@import 'components/experience';
 
 
 // 5. Compositions

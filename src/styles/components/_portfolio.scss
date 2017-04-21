@@ -1,0 +1,20 @@
+.portfolio {
+  background: #1E3152;
+	text-align: center;
+  padding: rem-calc(24 24 48);
+}
+.portfolio-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  max-width: rem-calc(1200);
+  margin-left: auto;
+  margin-right: auto;
+}
+.portfolio-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: rem-calc(14);
+  color: white;
+  margin: rem-calc(24) 0;
+}

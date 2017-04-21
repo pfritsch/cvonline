@@ -25,6 +25,7 @@ const uglify = require('gulp-uglify')
 
 // Styles
 const sass = require('gulp-sass')
+const plumber = require('gulp-plumber')
 const autoprefixer = require('gulp-autoprefixer')
 const cleanCSS = require('gulp-clean-css')
 const sourcemaps = require('gulp-sourcemaps')
@@ -72,6 +73,12 @@ gulp.task('copy', function () {
 gulp.task('fonts', function () {
   return gulp.src(src + 'assets/fonts/*')
     .pipe(gulp.dest(dist + 'assets/fonts/'))
+})
+
+// Copy docs
+gulp.task('docs', function () {
+  return gulp.src(src + 'assets/*')
+    .pipe(gulp.dest(dist + 'assets/'))
 })
 
 // TEMPLATE
@@ -137,6 +144,7 @@ gulp.task('scripts', function () {
 // Bower components main scripts files
 gulp.task('vendors', function () {
   var vendorsJS = require('wiredep')().js
+  // vendorsJS.push('src/be.js/be.js')
   return gulp.src(vendorsJS)
     .pipe(concat('vendors.min.js'))
     .pipe(uglify())
@@ -149,6 +157,7 @@ gulp.task('styles', function () {
   return gulp.src(src + 'styles/{,*/}*.{scss,sass}')
     .pipe(sourcemaps.init())
     .pipe(wiredep())
+    .pipe(plumber())
     .pipe(sass({
       errLogToConsole: true
     }))
@@ -198,7 +207,7 @@ gulp.task('clean', function () {
 })
 
 // BUILD
-gulp.task('build', ['copy', 'fonts', 'vendors', 'template', 'images', 'scripts', 'styles'], reload)
+gulp.task('build', ['copy', 'docs', 'fonts', 'vendors', 'template', 'images', 'scripts', 'styles'], reload)
 
 // SERVER
 // Browser Sync (wait build task to be done)
