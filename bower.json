@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "jquery": "^3.2.0",
-    "handlebars": "^4.0.5",
     "normalize-scss": "~3.0.3",
     "susy": "~2.2.2",
     "breakpoint-sass": "~2.5.0",
